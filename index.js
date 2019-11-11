@@ -889,9 +889,10 @@ function titleScreen()
   spawnPowerUps()
   drawStars()
   context.beginPath()
+  context.fillStyle = "#2C3E50"
+  context.font = "normal 70px Lato"
+  context.fillText("Latin Hist Trivia 1v1!", 390, 100)
   context.fillStyle = "#3498DB"
-  context.font = "normal 50px Lato"
-  context.fillText("EPIC 2 PLAYER SHOOTY MANEUVERY GAME!!!", 150, 100)
   if (mouseX > 450 && mouseX < 950 && mouseY > 380 && mouseY < 480)
   {
     context.fillStyle = "#5DADE2"
