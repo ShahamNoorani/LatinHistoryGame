@@ -258,8 +258,8 @@ function checkPowerUpCollisionsWithPlayer()
   for (var i = 0; i < powerUps.length; i++)
   {
     if (
-      powerUps[i].x < player1.position.x + 150 && powerUps[i].x + 60 > player1.position.x &&
-      powerUps[i].y < player1.position.y + 150 && powerUps[i].y + 60 > player1.position.y)
+      powerUps[i].x < player1.position.x + 200 && powerUps[i].x + 60 > player1.position.x &&
+      powerUps[i].y < player1.position.y + 200 && powerUps[i].y + 60 > player1.position.y)
       {
         player1.powerUp = {
           name: powerUps[i].name,
@@ -269,8 +269,8 @@ function checkPowerUpCollisionsWithPlayer()
         return
       }
     if (
-      powerUps[i].x < player2.position.x + 150 && powerUps[i].x + 60 > player2.position.x &&
-      powerUps[i].y < player2.position.y + 150 && powerUps[i].y + 60 > player2.position.y)
+      powerUps[i].x < player2.position.x + 200 && powerUps[i].x + 60 > player2.position.x &&
+      powerUps[i].y < player2.position.y + 200 && powerUps[i].y + 60 > player2.position.y)
       {
         player2.powerUp = {
           name: powerUps[i].name,
@@ -503,7 +503,7 @@ function checkBeamCollisionsWithPlayers()
   for(var i = 0; i < blueBeams.length; i++)
   {
     var beam = blueBeams[i]
-    if(beam.x > player2.position.x && beam.x < player2.position.x + 150 && beam.y - 15 > player2.position.y && beam.y < player2.position.y + 150) 
+    if(beam.x > player2.position.x && beam.x < player2.position.x + 200 && beam.y - 15 > player2.position.y && beam.y < player2.position.y + 200) 
     {
       questionBeingAsked = questions[Math.floor(Math.random() * questions.length)]
       timeLeftToAnswer = 840
@@ -515,7 +515,7 @@ function checkBeamCollisionsWithPlayers()
   for(var i = 0; i < redBeams.length; i++)
   {
     var beam = redBeams[i]
-    if(beam.x > player1.position.x && beam.x < player1.position.x + 150 && beam.y - 15 > player1.position.y && beam.y < player1.position.y + 150) 
+    if(beam.x > player1.position.x && beam.x < player1.position.x + 200 && beam.y - 15 > player1.position.y && beam.y < player1.position.y + 200) 
     {
       // player1.lives--
       questionBeingAsked = questions[Math.floor(Math.random() * questions.length)]
@@ -596,38 +596,38 @@ function movePlayer2()
 
 function checkPlayerCollisions() 
 {
-  if(player1.position.x >= 1270)
+  if(player1.position.x >= 1240)
   {
-    player1.position.x = 1265
+    player1.position.x = 1230
   }
-  if(player1.position.x <= 650)
+  if(player1.position.x <= 710)
   {
-    player1.position.x = 655
+    player1.position.x = 720
   }
-  if(player1.position.y >= 610)
+  if(player1.position.y >= 600)
   {
-    player1.position.y = 600
+    player1.position.y = 590
   }
-  if(player1.position.y <= -40)
+  if(player1.position.y <= -10)
   {
-    player1.position.y = -35
+    player1.position.y = 0
   }
 
-  if(player2.position.x >= 590)
+  if(player2.position.x >= 520)
   {
-    player2.position.x = 585
+    player2.position.x = 510
   }
-  if(player2.position.x <= -60)
+  if(player2.position.x <= -10)
   {
-    player2.position.x = -55
+    player2.position.x = 0
   }
-  if(player2.position.y >= 610)
+  if(player2.position.y >= 590)
   {
-    player2.position.y = 600
+    player2.position.y = 580
   }
-  if(player2.position.y <= -40)
+  if(player2.position.y <= -20)
   {
-    player2.position.y = -35
+    player2.position.y = -15
   }
 }
 
