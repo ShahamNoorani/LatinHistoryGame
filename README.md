@@ -6,7 +6,9 @@ Clone or download the repository.
 
 # How to Play
 Open the 'index.html' file using a browser of choice by either double-clicking on the file or running:
-  open index.html
+```bash
+open index.html
+```
 in your terminal.
 
 The controls for the player on the left: Move up -> W, Move down -> S, Move left -> A, Move right -> D, Shoot -> F.
