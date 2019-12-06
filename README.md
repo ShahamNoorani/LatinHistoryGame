@@ -11,7 +11,7 @@ open index.html
 ```
 in your terminal.
 
-The controls for the player on the left: 
-```Move up -> W, Move down -> S, Move left -> A, Move right -> D, Shoot -> F.```
-The controls for the player on the right: 
+The controls for the player on the left:  
+```Move up -> W, Move down -> S, Move left -> A, Move right -> D, Shoot -> F.```  
+The controls for the player on the right:  
 ```Move with the arrow keys; Shoot -> ',' (comma).```
