@@ -518,7 +518,7 @@ function checkBeamCollisionsWithPlayers()
   for(var i = 0; i < blueBeams.length; i++)
   {
     var beam = blueBeams[i]
-    if(beam.x > player2.position.x && beam.x < player2.position.x + 200 && beam.y - 15 > player2.position.y && beam.y < player2.position.y + 200) 
+    if(beam.x + 50 > player2.position.x && beam.x < player2.position.x + 200 && beam.y > player2.position.y && beam.y < player2.position.y + 160) 
     {
       questionBeingAsked = questions[Math.floor(Math.random() * questions.length)]
       timeLeftToAnswer = 840
@@ -530,7 +530,7 @@ function checkBeamCollisionsWithPlayers()
   for(var i = 0; i < redBeams.length; i++)
   {
     var beam = redBeams[i]
-    if(beam.x > player1.position.x && beam.x < player1.position.x + 200 && beam.y - 15 > player1.position.y && beam.y < player1.position.y + 200) 
+    if(beam.x + 50 > player1.position.x && beam.x < player1.position.x + 200 && beam.y > player1.position.y && beam.y < player1.position.y + 180) 
     {
       // player1.lives--
       questionBeingAsked = questions[Math.floor(Math.random() * questions.length)]
