@@ -157,7 +157,7 @@ var disableShootingPowerDownImage = new Image(8, 8)
 disableShootingPowerDownImage.src = "disableShootingPowerDown.png"
 
 var stars = []
-for (var i = 0; i < 500; i++) 
+for (var i = 0; i < 500; i++)
 {
   stars[i] = 
   {
@@ -172,6 +172,7 @@ for (var i = 0; i < 500; i++)
 
 var powerUps = [] // rapid fire, quick movement, extra life, slow down, no shooting for 5 seconds
 
+// arnav
 function spawnPowerUps()
 {
   var random = Math.random() * 300
@@ -238,6 +239,7 @@ function spawnPowerUps()
   }
 }
 
+// arnav
 function drawPowerUps()
 {
   context.save()
@@ -253,6 +255,7 @@ function drawPowerUps()
   context.restore()
 }
 
+// shaham
 function checkPowerUpCollisionsWithPlayer()
 {
   for (var i = 0; i < powerUps.length; i++)
@@ -281,6 +284,7 @@ function checkPowerUpCollisionsWithPlayer()
   }
 }
 
+// arnav
 function applyPowerUpsToPlayers()
 {
   player2.powerUp.timeLeft--
@@ -342,6 +346,7 @@ function applyPowerUpsToPlayers()
   }
 }
 
+// shaham
 function resetVariables()
 {
   player1.lives = 3
@@ -372,6 +377,7 @@ function resetVariables()
   }
 }
 
+// shaham
 function drawStars() 
 {
   context.save()
@@ -402,6 +408,7 @@ function drawStars()
   context.restore()
 }
 
+// shaham
 function drawPlayers() 
 {
   movePlayer1()
@@ -412,6 +419,7 @@ function drawPlayers()
   player2.shootCooldown--
 }
 
+// shaham
 function shootRedBeam()
 {
   if (player2.shootCooldown >= 0)
@@ -427,6 +435,7 @@ function shootRedBeam()
  player2.shootCooldown = player2.shootSpeed
 }
 
+// shaham
 function shootBlueBeam()
 {
   if (player1.shootCooldown >= 0)
@@ -442,6 +451,7 @@ function shootBlueBeam()
   player1.shootCooldown = player1.shootSpeed
 }
 
+// shaham
 function updateBeams()
 {
   for(var i = 0; i < redBeams.length; i++)
@@ -454,6 +464,7 @@ function updateBeams()
   }
 }
 
+// shaham
 function drawBeams()
 {
   context.save()
@@ -468,6 +479,7 @@ function drawBeams()
   context.restore()
 }
 
+// arnav
 function printLives()
 {
   context.beginPath()
@@ -478,6 +490,7 @@ function printLives()
   context.closePath()
 }
 
+// arnav
 function printScore()
 {
   context.beginPath()
@@ -488,6 +501,7 @@ function printScore()
   context.closePath()
 }
 
+// arnav
 function printCurrentPowerUp()
 {
   context.beginPath()
@@ -498,6 +512,7 @@ function printCurrentPowerUp()
   context.closePath()
 }
 
+// shaham
 function checkBeamCollisionsWithPlayers()
 {
   for(var i = 0; i < blueBeams.length; i++)
@@ -526,6 +541,8 @@ function checkBeamCollisionsWithPlayers()
   }
 }
 
+
+// arnav
 function askQuestion()
 {
   timeLeftToAnswer--
@@ -548,12 +565,14 @@ function askQuestion()
   context.restore()
 }
 
+// shaham
 function getRandomColor()
 {
     var o = Math.round, r = Math.random, s = 255;
     return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',';
 }
 
+// arnav
 function movePlayer1()
 {
   if (player1.directionMoving[0])
@@ -574,6 +593,7 @@ function movePlayer1()
   }
 }
 
+// arnav
 function movePlayer2()
 {
   if (player2.directionMoving[0])
@@ -594,6 +614,7 @@ function movePlayer2()
   }
 }
 
+// arnav
 function checkPlayerCollisions() 
 {
   if(player1.position.x >= 1240)
@@ -631,6 +652,7 @@ function checkPlayerCollisions()
   }
 }
 
+// shaham
 function keyLetGo(event)
 {
     switch(event.keyCode)
@@ -824,12 +846,14 @@ canvas.addEventListener('click', function(evt)
   click = true
 })
 
+// arnav
 function setMouseXY(event)
 {
   mouseX = event.clientX
   mouseY = event.clientY
 }
 
+// arnav
 function displayWinner()
 {
   context.beginPath()
@@ -883,6 +907,7 @@ function displayWinner()
   context.closePath()
 }
 
+// arnav
 function titleScreen()
 {
   context.clearRect(0, 0, canvas.width, canvas.height)
@@ -922,6 +947,7 @@ function titleScreen()
   click = false
 }
 
+// arnav
 function game()
 {
   context.clearRect(0, 0, canvas.width, canvas.height)
@@ -934,11 +960,6 @@ function game()
   }
   else
   {
-    spawnPowerUps()
-    drawPowerUps()
-    printCurrentPowerUp()
-    checkPowerUpCollisionsWithPlayer()
-    applyPowerUpsToPlayers()
     context.beginPath()
     context.fillStyle = "gray"
     context.fillRect(710, 0, 20, 760)
@@ -973,6 +994,11 @@ function game()
     }
     else {
       printLives()
+      spawnPowerUps()
+      drawPowerUps()
+      printCurrentPowerUp()
+      checkPowerUpCollisionsWithPlayer()
+      applyPowerUpsToPlayers()
     }
     printScore()
   }
