@@ -523,7 +523,6 @@ function checkBeamCollisionsWithPlayers()
       questionBeingAsked = questions[Math.floor(Math.random() * questions.length)]
       timeLeftToAnswer = 840
       playerBeingAsked = "player1"
-      // player2.lives--
       blueBeams.splice(i, 1)
     }
   }
@@ -532,7 +531,6 @@ function checkBeamCollisionsWithPlayers()
     var beam = redBeams[i]
     if(beam.x + 50 > player1.position.x && beam.x < player1.position.x + 200 && beam.y > player1.position.y && beam.y < player1.position.y + 180) 
     {
-      // player1.lives--
       questionBeingAsked = questions[Math.floor(Math.random() * questions.length)]
       timeLeftToAnswer = 840
       playerBeingAsked = "player2"
@@ -699,7 +697,6 @@ function keyLetGo(event)
             break
         
         case 49:
-          console.log("J")
           if (playerBeingAsked == "player2" && questionBeingAsked.correctAnswer == "A")
           {
             player1.lives--
@@ -952,7 +949,6 @@ function game()
 {
   context.clearRect(0, 0, canvas.width, canvas.height)
   drawStars()
-  console.log("lmao")
   if (timeLeftToAnswer > 0)
   {
     askQuestion()
