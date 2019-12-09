@@ -309,7 +309,7 @@ function applyPowerUpsToPlayers()
   }
   if (player2.powerUp.name == "Unarmed")
   {
-    player2.shootCooldown = 5
+    player2.shootCooldown = 10
   }
   if (player2.powerUp.name == "Rapid Fire")
   {
@@ -338,7 +338,7 @@ function applyPowerUpsToPlayers()
   }
   if (player1.powerUp.name == "Unarmed")
   {
-    player1.shootCooldown = 300
+    player1.shootCooldown = 10
   }
   if (player1.powerUp.name == "Rapid Fire")
   {
