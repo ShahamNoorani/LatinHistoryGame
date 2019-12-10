@@ -78,7 +78,26 @@ var questions = [
     choices: ["Near the south of the Greek archipelago", "In western Turkey", "Where modern-day Istanbul is"],
     correctAnswer: "B"
   },
-  
+  {
+    question: "What is the origin behind the 'She-Wolf' in the Romulus/Remus myth?",
+    choices: ["The woman that found the pair was very hairy", "The woman who found them had silver hair", "The woman that found them was nicknamed 'she-wolf' by her village"],
+    correctAnswer: "C"
+  },
+  {
+    question: "Which of these authors writes an epic the Trojan War?",
+    choices: ["Homer", "Livy", "Ovid"],
+    correctAnswer: "A"
+  },
+  {
+    question: "Who was the mother of Aeneas?",
+    choices: ["Jupiter", "Venus", "Hera"],
+    correctAnswer: "B"
+  },
+  {
+    question: "Why did Aeneas kill Turnus after choosing to spare him?",
+    choices: ["He didn't", "Turnus raped his wife", "Turnus bore the belt of Pallas"],
+    correctAnswer: "C"
+  },
 ]
 
 var redBeams = [], blueBeams = []
